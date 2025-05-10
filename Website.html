@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Man Corporation</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* History Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            padding: 2rem;
+            position: relative;
+            border-left: 2px solid var(--secondary-color);
+            margin-left: 20px;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .team-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--light-bg);
+            border-radius: 15px;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .team-group-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .team-member {
+            text-align: center;
+            width: 100%;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: var(--text-color);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-text {
+            font-size: 0.7rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ToolMan Corpation 工具人集团</div>
+            <div class="nav-links">
+                <a href="#home">首页</a>
+                <a href="#history">集团历史</a>
+                <a href="#team">我们的团队</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>欢迎来到<br>ToolMan Corporation 工具人集团</h1>
+            <p>始于一群充满激情的年轻人的梦想!</p>
+            <a href="#history" class="cta-button">了解更多</a>
+        </div>
+    </section>
+
+    <section id="history">
+        <h2 class="section-title">集团历史</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <p>
+                    工具人集团自2024年10月创立。工具人集团在创立时只是一间小小的公司，只有少少的3位员工和1位原始董事长 Puan.Law Meay Yinn。原本公司的创立的作用和宗旨是为了对加入公司的人进行辅导，后来慢慢演变成如今的坐拥9人的集团。集团从创建以来经历不少挫折，包括多次的裁员、转换公司以及等等的问题，最终坚持到了现在。可是我们依然不忘初衷，铭记公司创建时的宗旨。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2 class="section-title">我们的团队</h2>
+        <div class="team-grid">
+            <div class="team-group">
+                <div class="team-group-title">最高管理层</div>
+                <div class="team-member">
+                    <h3>Puan.Law Meay Yinn</h3>
+                    <p>尊敬的集团董事长 <br>
+                        Chairman</p>
+                </div>
+            </div>
+
+            <div class="team-group">
+                <div class="team-group-title">集团管理层</div>
+                <div class="team-member">
+                    <h3>Terrence Teh</h3>
+                    <p>集团总监 <br>
+                        Director of Corpation</p>
+                </div>
+                <div class="team-member">
+                    <h3>Kuan Yi Zhe</h3>
+                    <p>集团副总监 <br>
+                        Deputy Director of Corpation</p>
+                </div>
+            </div>
+
+            <div class="team-group">
+                <div class="team-group-title">财务</div>
+                <div class="team-member">
+                    <h3>Teh Wei Xin</h3>
+                    <p>财务总监 <br>
+                        Financial Director</p>
+                </div>
+                <div class="team-member">
+                    <h3>Lee Yi Qian</h3>
+                    <p>财务副总监 <br>
+                        Financial Deputy Director</p>
+                </div>
+            </div>
+
+            <div class="team-group">
+                <div class="team-group-title">员工团队</div>
+                <div class="team-member">
+                    <h3>Ooi Kai Xuan</h3>
+                    <p>最佳老员工 <br>
+                        The Best of Staff</p>
+                </div>
+                <div class="team-member">
+                    <h3>Teoh Yee Xin</h3>
+                    <p>员工 <br>
+                        Staff</p>
+                </div>
+                <div class="team-member">
+                    <h3>Khor Xiao Fenn</h3>
+                    <p>员工 <br>
+                        Staff</p>
+                </div>
+                <div class="team-member">
+                    <h3>Goh Ee Wen</h3>
+                    <p>员工 <br>
+                        Staff</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-content">
+            <p class="contact-text">Contact our gmail or phone number to join us!<br> toolmancorpation@gmail.com</p>
+        </div>
+    </section>
+</body>
+</html
